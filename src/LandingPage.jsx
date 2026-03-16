@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import jasurPhoto from './assets/jasur.jpg';
 import avatar1 from './assets/u1.png';
 import avatar2 from './assets/u2.png';
@@ -51,14 +51,14 @@ const ClockIcon = () => (
 
 // Reusable Components
 const CTAButton = ({ text, subtext, className = "" }) => (
-  <button className={`relative w-full overflow-hidden group bg-gradient-to-r from-[#FF416C] to-[#FF4B2B] text-white py-4 md:py-5 px-6 md:px-8 rounded-2xl md:rounded-3xl font-black text-lg md:text-xl shadow-[0_12px_30px_-5px_rgba(255,65,108,0.4)] transition-all hover:scale-[1.03] transform duration-300 active:scale-95 flex flex-col items-center justify-center gap-1 cursor-pointer custom-pulse-btn ${className}`}>
+  <a href="https://saidkulov.exode.biz/pay/2097/1786" className={`relative w-full overflow-hidden group bg-gradient-to-r from-[#FF416C] to-[#FF4B2B] text-white py-4 md:py-5 px-6 md:px-8 rounded-2xl md:rounded-3xl font-black text-lg md:text-xl shadow-[0_12px_30px_-5px_rgba(255,65,108,0.4)] transition-all hover:scale-[1.03] transform duration-300 active:scale-95 flex flex-col items-center justify-center gap-1 cursor-pointer custom-pulse-btn no-underline ${className}`}>
     <div className="flex items-center gap-2">
       <span className="text-center">{text}</span>
       <span className="text-2xl custom-wiggle">🔥</span>
     </div>
     {subtext && <span className="text-[11px] md:text-sm font-semibold opacity-90 text-center">{subtext}</span>}
     <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-20 group-hover:animate-shine" />
-  </button>
+  </a>
 );
 
 const FAQItem = ({ question, answer }) => {
@@ -289,9 +289,9 @@ const LandingPage = () => {
                   Siz pulingizni xavf ostiga qo‘ymaysiz, uyingizda tovar saqlamaysiz va yetkazib berish bilan shug‘ullanmaysiz.
                 </p>
                 <div className="bg-white/10 p-1 rounded-2xl">
-                  <button className="w-full bg-white text-blue-700 py-4 px-6 rounded-xl font-black text-lg transition-transform hover:scale-[1.02] active:scale-95 shadow-lg">
+                  <a href="https://saidkulov.exode.biz/pay/2097/1786" className="block text-center w-full bg-white text-blue-700 py-4 px-6 rounded-xl font-black text-lg transition-transform hover:scale-[1.02] active:scale-95 shadow-lg no-underline">
                     Bu men haqimda — menga 89 000 so‘mlik sxemani ko‘rsating
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
