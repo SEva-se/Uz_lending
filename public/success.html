@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To'lov muvaffaqiyatli! | Jasur Saidqulov</title>
+    <title>Muvaffaqiyatli to'lov</title>
+    
     <!-- Meta Pixel Code -->
     <script>
     !function(f,b,e,v,n,t,s)
@@ -16,31 +17,48 @@
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '2279015839289671');
     fbq('track', 'PageView');
+    
+    // Purchase Event
     fbq('track', 'Purchase', {
       value: 89000,
       currency: 'UZS'
     });
     </script>
+    <!-- End Meta Pixel Code -->
+
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5;
+        }
+        .message {
+            text-align: center;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 { color: #1c1e21; }
+        p { color: #606770; }
+    </style>
+</head>
+<body>
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=2279015839289671&ev=PageView&noscript=1"
     /></noscript>
-    <!-- End Meta Pixel Code -->
-</head>
-<body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #f7faf9; display: flex; align-items: center; justify-content: center; min-height: 100vh;">
-    <div style="background: white; padding: 48px 32px; border-radius: 32px; box-shadow: 0 20px 40px rgba(0,0,0,0.06); text-align: center; max-width: 480px; width: 90%; border: 1px solid #edf2f0;">
-        <div style="width: 88px; height: 88px; background: #22c55e; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 32px; box-shadow: 0 8px 16px rgba(34, 197, 94, 0.2);">
-            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-        </div>
-        <h1 style="margin: 0 0 16px; color: #0f172a; font-size: 28px; font-weight: 800; letter-spacing: -0.025em;">To'lov muvaffaqiyatli!</h1>
-        <p style="margin: 0 0 32px; color: #475569; line-height: 1.6; font-size: 16px; font-weight: 500;">
-            Tabriklaymiz! To'lov muvaffaqiyatli amalga oshirildi. Asosiy sahifaga qaytish uchun quyidagi tugmani bosing:
-        </p>
-        <a href="/" style="display: block; background: #0088cc; color: white; padding: 18px; border-radius: 16px; text-decoration: none; font-weight: 700; font-size: 18px; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 10px 20px -5px rgba(0, 136, 204, 0.4);" onmouseover="this.style.transform='scale(1.02)'; this.style.boxShadow='0 15px 30px -5px rgba(0, 136, 204, 0.6)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 10px 20px -5px rgba(0, 136, 204, 0.4)'">
-            Asosiy menyuga o'tish
-        </a>
-        <p style="margin-top: 24px; color: #94a3b8; font-size: 14px; font-weight: 500;">
-            Agar tugma ishlamasa, 5 daqiqa kuting va qayta urinib ko'ring.
-        </p>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2279015839289671&ev=Purchase&cd[value]=89000&cd[currency]=UZS&noscript=1"
+    /></noscript>
+
+    <div class="message">
+        <h1>To'lov muvaffaqiyatli yakunlandi!</h1>
+        <p>Sizning buyurtmangiz qabul qilindi. Tez orada siz bilan bog'lanamiz.</p>
     </div>
 </body>
 </html>
