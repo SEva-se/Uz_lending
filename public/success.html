@@ -114,6 +114,21 @@
             70% { transform: scale(0.9); }
             100% { transform: scale(1); }
         }
+        .btn-telegram {
+            background: linear-gradient(135deg, #229ED9 0%, #1281b3 100%) !important;
+            box-shadow: 0 10px 25px -5px rgba(34, 158, 217, 0.4) !important;
+            display: inline-flex !important;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+        .btn-telegram:hover {
+            box-shadow: 0 20px 30px -10px rgba(34, 158, 217, 0.5) !important;
+        }
+        .btn-telegram svg {
+            width: 20px;
+            height: 20px;
+        }
     </style>
 </head>
 <body>
@@ -134,7 +149,12 @@
         </div>
         <h1>Xaridingiz uchun rahmat!</h1>
         <p>Sizning buyurtmangiz muvaffaqiyatli qabul qilindi. Tez orada siz bilan bog'lanamiz.</p>
-        <a href="/" class="btn">Bosh sahifaga qaytish</a>
+        <a href="https://t.me/+xT1RMkz9o31mZmI8" class="btn btn-telegram">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 5L2 12.5L9 13.5M21 5L18.5 20L9 13.5M21 5L9 13.5M9 13.5V19L12 15.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Telegram kanalimizga o'tish
+        </a>
     </div>
 </body>
 </html>
