@@ -96,9 +96,75 @@ const SectionHeader = ({ badge, title, subtitle }) => (
   </div>
 );
 
+const PaymentModal = ({ isOpen, onClose }) => {
+  const [name, setName] = useState('');
+
+  if (!isOpen) return null;
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!name.trim()) return;
+
+    if (window.fbq) {
+      window.fbq('track', 'Lead');
+    }
+
+    window.location.href = 'https://saidkulov.exode.biz/pay/2097/1786';
+  };
+
+  return (
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+      <div className="bg-white w-full max-w-md rounded-3xl p-6 md:p-8 shadow-2xl relative overflow-hidden animate-fade-in-up">
+        <button onClick={onClose} type="button" className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors">
+          <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
+        </button>
+        
+        <div className="text-center mb-6">
+          <div className="w-16 h-16 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center text-3xl mx-auto mb-4">✨</div>
+          <h3 className="text-2xl font-black text-gray-900 mb-2">Joyni band qilish</h3>
+          <p className="text-gray-500 font-medium text-sm">Davom etish va to'lov sahifasiga o'tish uchun ismingizni kiriting</p>
+        </div>
+
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+          <div>
+            <label className="block text-sm font-bold text-gray-700 mb-2">Ismingiz</label>
+            <input 
+              type="text" 
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="Masalan: Jasur"
+              className="w-full px-5 py-4 rounded-xl border-2 border-gray-100 bg-gray-50 text-gray-900 font-medium focus:border-[#FF416C] focus:bg-white focus:outline-none transition-all placeholder-gray-400"
+              required
+            />
+          </div>
+          <button 
+            type="submit" 
+            className="w-full mt-2 bg-gradient-to-r from-[#FF416C] to-[#FF4B2B] text-white font-black py-4 px-6 rounded-xl shadow-[0_10px_20px_rgba(255,65,108,0.3)] hover:shadow-[0_10px_25px_rgba(255,65,108,0.4)] transform hover:-translate-y-0.5 active:translate-y-0 transition-all custom-pulse-btn"
+          >
+            To'lovga o'tish
+          </button>
+        </form>
+      </div>
+    </div>
+  );
+};
+
 const LandingPage = () => {
   const [timeLeft, setTimeLeft] = useState(20 * 60);
   const [scrollY, setScrollY] = useState(0);
+  const [isPaymentModalOpen, setIsPaymentModalOpen] = useState(false);
+
+  useEffect(() => {
+    const handleLinkClick = (e) => {
+      const target = e.target.closest('a');
+      if (target && target.href === 'https://saidkulov.exode.biz/pay/2097/1786') {
+        e.preventDefault();
+        setIsPaymentModalOpen(true);
+      }
+    };
+    document.addEventListener('click', handleLinkClick);
+    return () => document.removeEventListener('click', handleLinkClick);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -750,6 +816,11 @@ const LandingPage = () => {
         </section>
 
       </div >
+
+      <PaymentModal 
+        isOpen={isPaymentModalOpen} 
+        onClose={() => setIsPaymentModalOpen(false)} 
+      />
 
       <style dangerouslySetInnerHTML={{
         __html: `
