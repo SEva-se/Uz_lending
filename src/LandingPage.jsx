@@ -118,7 +118,7 @@ const PaymentModal = ({ isOpen, onClose }) => {
         <button onClick={onClose} type="button" className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors">
           <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
         </button>
-        
+
         <div className="text-center mb-6">
           <div className="w-16 h-16 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center text-3xl mx-auto mb-4">✨</div>
           <h3 className="text-2xl font-black text-gray-900 mb-2">Joyni band qilish</h3>
@@ -128,8 +128,8 @@ const PaymentModal = ({ isOpen, onClose }) => {
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <div>
             <label className="block text-sm font-bold text-gray-700 mb-2">Ismingiz</label>
-            <input 
-              type="text" 
+            <input
+              type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="Masalan: Jasur"
@@ -137,8 +137,8 @@ const PaymentModal = ({ isOpen, onClose }) => {
               required
             />
           </div>
-          <button 
-            type="submit" 
+          <button
+            type="submit"
             className="w-full mt-2 bg-gradient-to-r from-[#FF416C] to-[#FF4B2B] text-white font-black py-4 px-6 rounded-xl shadow-[0_10px_20px_rgba(255,65,108,0.3)] hover:shadow-[0_10px_25px_rgba(255,65,108,0.4)] transform hover:-translate-y-0.5 active:translate-y-0 transition-all custom-pulse-btn"
           >
             To'lovga o'tish
@@ -223,9 +223,9 @@ const LandingPage = () => {
           {/* ── TOP BLOCK (Normal Flow, shrink-0) ── */}
           <div className="shrink-0 relative z-[30] flex flex-col items-center w-full px-4">
             {/* Top Badges */}
-            <div className="flex flex-nowrap whitespace-nowrap gap-2 sm:gap-3 items-center justify-center pb-4 animate-fade-in-up">
+            <div className="flex flex-col whitespace-nowrap gap-2 sm:gap-3 items-center justify-center pb-4 animate-fade-in-up">
               <div className="bg-blue-600 text-white px-3 py-1.5 sm:px-5 sm:py-2.5 rounded-full font-extrabold uppercase text-[9px] sm:text-[11px] md:text-xs tracking-widest shadow-md">
-                Mini-kurs
+                Shaxsiy tahlilli 6 kunlik praktikum
               </div>
               <div className="bg-white text-gray-800 border border-gray-200 px-3 py-1.5 sm:px-5 sm:py-2.5 rounded-full font-extrabold uppercase text-[9px] sm:text-[11px] md:text-xs tracking-widest shadow-sm">
                 To'lovdan so'ng darhol boshlash
@@ -817,9 +817,9 @@ const LandingPage = () => {
 
       </div >
 
-      <PaymentModal 
-        isOpen={isPaymentModalOpen} 
-        onClose={() => setIsPaymentModalOpen(false)} 
+      <PaymentModal
+        isOpen={isPaymentModalOpen}
+        onClose={() => setIsPaymentModalOpen(false)}
       />
 
       <style dangerouslySetInnerHTML={{
